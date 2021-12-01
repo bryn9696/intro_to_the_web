@@ -11,3 +11,7 @@ group :development, :test do
   gem 'sinatra'
   gem 'capybara'
 end
+
+gem "rack", "~> 2.2"
+gem "sinatra-contrib", "~> 2.1"
+gem "puma", "~> 5.5"
