@@ -10,6 +10,6 @@ feature 'Attack' do
     sign_in_and_play
     save_and_open_page
     click_link "Attack"
-    expect(page).to have_content "Michael attacks, Bryn 50HP"
+    expect(page).to have_content "Michael attacks Bryn"
   end
 end
