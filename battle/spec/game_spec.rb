@@ -7,7 +7,7 @@ describe Game do
   describe '#attack' do
     it 'damages the player' do
       expect(bryn).to receive(:receive_damage)
-      subject.attack(bryn)
+      Game.new(michael, bryn).attack(bryn)
     end
   end
 end
