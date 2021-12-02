@@ -12,4 +12,11 @@ feature 'Attack' do
     click_link "Attack"
     expect(page).to have_content "Michael attacks Bryn"
   end
+  scenario 'player switches turns' do
+    sign_in_and_play
+    save_and_open_page
+    click_link "Attack"
+    click_link "BACK TO THE BATTLE!"
+    expect(page).to have_content "Bryn's turn" 
+  end
 end

@@ -7,7 +7,13 @@ describe Game do
   describe '#attack' do
     it 'damages the player' do
       expect(bryn).to receive(:receive_damage)
-      Game.new(michael, bryn).attack(bryn)
+      Game.new(michael, bryn).attack(michael)
+    end
+  end
+
+  describe '#turn' do
+    it 'starts as player 1' do
+      expect(Game.new(michael, bryn).turn).to eq michael
     end
   end
 end
